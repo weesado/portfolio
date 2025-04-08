@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тилку Алла - Портфолио</title>
+    <link rel="icon" type="icon" href="img/icon.png">
+    <style>
+        @font-face {
+        font-family: 'Helvetica Neue Cyr';
+        src: url('HelveticaNeueCyr/helveticaneuecyr_ultralight.otf') format('opentype');
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'Helvetica Neue Cyr';
+        src: url('helveticaneuecyr_roman.otf') format('opentype');
+        font-style: bold;
+        }
+        
+
+        @font-face {
+        font-family: 'Helvetica Neue Cyr';
+        src: url('HelveticaNeueCyr/helveticaneuecyr_ultralightitalic.otf') format('opentype');
+        font-style: italic;
+        }
+
+        .italic {
+        font-family: 'Helvetica Neue Cyr';
+        font-style: italic;
+        }
+        
+        body {
+            font-family: Helvetica Neue Cyr, sans-serif;
+            margin: 0;
+            background-color: white;
+            color: black;
+            overflow-x: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 10;
+        }
+        nav a {
+            color: #676767;
+            text-decoration: none;
+            margin: 0 10vh;
+            transition: color 0.3s;
+            font-size: 1.5vh;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            color: #FF1493;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 40vh;
+        }
+    .portfolio-grid {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.double {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Или space-between, если нужно */
+}
+
+.image_two img {
+    transition: transform 0.3s ease; /* Плавная анимация */
+}
+
+.image_two:hover img {
+    transform: scale(1.1); /* Увеличение изображения на 10% при наведении */
+}
+
+
+.image_three img {
+    transition: transform 0.3s ease; /* Плавная анимация */
+}
+
+.image_three:hover img {
+    transform: scale(1.1); /* Увеличение изображения на 10% при наведении */
+}
+
+.image_two {
+    width: 49.9%; 
+}
+
+     
+        .scroll-top {
+            display: block; /* Убедимся, что элемент блочный */
+            margin: 20px auto; /* Центрируем элемент по оси X с помощью отступов */
+            background-color: #FF1493;
+            color: white;
+            padding: 2vh; /* Уменьшаем отступы для меньшего размера */
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 2vh;
+            text-align: center; 
+            width: 3vh; 
+            height: 3vh; 
+        }
+        .scroll-top:hover {
+            background-color: #FF69B4;
+        }
+      
+        h2{
+            font-size: 5vh;
+        }
+        h1{
+            font-size: 12vh;
+        }
+        #main {
+        margin-bottom: 12vh;
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 40px; 
+        padding: 13vh; 
+        }
+
+
+        #main>h1 {
+            margin-top: 2vh;
+            grid-column: 3; 
+        }
+
+        #home {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px; 
+        padding: 13vh; 
+        
+        }
+
+        #home>h2, #price>h2, #contact>h2, #portfolio>h2 {
+            grid-column: 1;
+            color: #676767;
+            font-size: 2vh;
+            margin-bottom: 10vh;
+        }
+
+        #portfolio {
+       
+        padding: 13vh; 
+        
+        }
+
+        #table {
+        padding: 13vh; 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
+        margin-top: -25vh;
+    
+        }
+
+
+        #home>h1 {
+            margin-top: 2vh;
+            grid-column: 1; 
+            max-width: 200px
+        }
+
+        .r1{
+            font-size: 2.2vh;
+            grid-column: 1;
+            text-align: justify;
+            hyphens: auto;
+        }
+        .r2{
+            text-align: justify;
+            font-size: 2.2vh;
+            grid-column: 2;
+            hyphens: auto;
+        }
+
+        .p1{
+            font-size: 1.8vh;
+            grid-column: 2;
+            margin-top: -22vh;
+            margin-left: -8vh;
+        }
+
+        .p2{
+            font-size: 1.8vh;
+            grid-column: 3;
+            margin-top: -4vh;
+        }
+
+        .p3{
+            font-size: 1.8vh;
+            grid-column: 2;
+            margin-top: -10vh;
+            margin-left: -8vh;
+            margin-bottom: 10vh;
+        }
+
+        .p4{
+            font-size: 2.2vh;
+            grid-column: 1;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .p5{
+            font-size: 4vh;
+            grid-column: 2;
+            white-space: nowrap;
+            font-weight: bold;
+            height: 5vh;
+            border-bottom: 2px solid black; 
+        }
+        .p6{
+            color: #FF1493;
+            font-size: 4vh;
+            grid-column:2;
+            white-space: nowrap;
+            font-weight: bold;
+            height: 5vh;
+            border-bottom: 2px solid black; 
+        }
+        .p7{
+            font-size: 4vh;
+            grid-column: 2;
+            white-space: nowrap;
+            font-weight: bold;
+            height: 5vh;
+            border-bottom: 2px solid black; 
+        }
+
+        .p8{
+            font-size: 2.2vh;
+            grid-column: 3;
+            text-align: justify;
+            hyphens: auto;
+            
+        }
+
+        #quote {
+        padding: 13vh; 
+        font-size: 10vh;
+        font-weight: bold;
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: -10vh;
+    
+        }
+
+        #contact {
+        padding: 13vh; 
+        font-size: 10vh;
+        font-weight: bold;
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: -10vh;
+    
+        }
+
+
+        .p9{
+            grid-column: 1;
+            white-space: nowrap;
+            min-width: 100px;
+            
+        }
+        .p10{
+            grid-column: 1;
+            white-space: nowrap;
+            font-style: italic;
+            color: #FF1493;
+            margin-top: -10vh;
+        }
+
+        .p11{
+            grid-column: 2;
+            white-space: nowrap;
+            min-width: 100px;
+            margin-top: -10vh;
+
+        }
+
+        .p12{
+            grid-column: 2;
+            white-space: nowrap;
+            font-size: 15vh;
+            font-style: italic;
+            color: #FF1493;
+            margin-top: -10vh;
+
+        }
+
+
+
+        .p1, .p2, .p3 {
+        max-width: 200px; 
+        white-space: nowrap; 
+        }
+
+        .image_one {
+        grid-column: 3 / 5;
+        width: 120%; 
+        margin-top: 10vh;
+    }
+        .animated-image {
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+
+    .animated-image.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    #price {
+         padding: 13vh; 
+        display: flex; 
+        flex-direction: column;
+        margin-top: -15vh;
+    }
+
+        .price-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14vh;
+        }
+
+        .price-item span:first-of-type {
+            color: #676767;
+            font-family: 'Helvetica Neue Cyr', sans-serif;
+        }
+
+        .price-item span:last-of-type {
+            color: #FF1493;
+            font-size: 4vh;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .price-item img {
+            width: 75%;
+        }
+
+        .text-box{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .type_one{
+            margin-right: -20vh;
+        }
+
+        .type_two{
+            margin-left: -20vh;
+        }
+
+        .first{
+            margin-right: 25vh;
+        }
+
+        .second{
+            margin-right: -25vh;
+        }
+        .q1{
+            grid-column: 1;
+            white-space: nowrap; 
+        }
+        .q2{
+            grid-column: 1;
+            margin-top: -10vh;
+        }
+        .q3{
+            grid-column: 2;
+            color:#FF1493;
+            margin-top: -10vh;
+        }
+        .footer{
+
+            display: flex;
+           justify-content: center;
+            width: 30vh;
+            justify-self: center;
+        }
+
+
+</style>
+            
+</head>
+<body>
+
+<nav>
+    <div>
+        <a href="#home">ОБО МНЕ</a>
+        <a href="#price">ПРАЙС</a>
+        <a href="#portfolio">ПОРТФОЛИО</a>
+        <a href="#contact">КОНТАКТЫ</a>
+    </div>
+</nav>
+
+<section id="main">
+    <h2 class="custom-h2" style="color: #FF1493;">2D и 3D <br> <span style="color: #676767">художник</span></h2>
+    <h1 class="custom-h1">ТИЛКУ <br> <span class="italic">АЛЛА</span></h1>
+</section>
+
+<section id="home">
+    <h2>[ОБО МНЕ]</h2>
+    <h1>ЛИЧНОСТЬ</h1>
+    <p class="r1">Меня зовут Алла, и я 2D и 3D художник  с  опытом работы в сфере дизайна. </p>
+    <p class="r2">Я стремлюсь к постоянному обучению и развитию, чтобы создавать что-то действительно уникальное и вдохновляющее. </p>
+    <img src="img/2.png" class="image_one animated-image">
+    <p class="p1"><span style="color: #FF1493;font-size: 20vh;font-weight: bold; ;">2016</span><br>Фриланс в качестве художника-иллюстратора</p>
+    <p class="p2"><span style="color: #FF1493;font-size: 20vh;font-weight: bold; ">2020</span><br>Студент СПБГУПТД по профилю “Прикладная информатика в дизайне” </p>
+    <p class="p3"><span style="color: #FF1493;font-size: 20vh;font-weight: bold; ">2025</span><br>Бакалавр Прикладной Информатики </p>
+    <h1>РАБОТАЮ</h1>
+    <p class="p4">В своей работе я пробовала множество программного обеспечения и платформ, чтобы найти те, которые наилучшим образом соответствуют моим творческим потребностям.</p>
+    <p class="p8">Программы, в которых я полностью разбираюсь, помечены другим цветом.</p>
+</section>
+<section id="table">
+    <p class="p5">ZBRUSH, BLENDER, MAYA</p>
+    <p class="p6">PHOTOSHOP, ILLUSTRATOR, CLIP STUDIO</p>
+    <p class="p7">AFTER EFFECTS, DAVINVI, SPINE</p>
+</section>
+<section id="quote">
+    <p class="p9">ВО МНОГОМ СОФТЕ</p>
+    <p class="p10">Я НЕ ПРО</p>
+    <p class="p11">НО Я НИКОГДА</p>
+    <p class="p12">НЕ СДАЮСЬ</p>
+</section>
+<section id="portfolio">
+    <h2>[ПОРТФОЛИО]</h2>
+    <div class="portfolio-grid">
+        <div class = "image_three animated-image">
+        <a href="index2.html">
+            <img src="img/3.png" width="100%">
+        </a></div>
+        <div class = 'double'>
+        <div class = "image_two animated-image">
+            <a href="index3.html">
+                <img src="img/4.png" width="100%">
+        </a></div>
+        <div class = "image_two animated-image">
+            <a href="index4.html">
+                <img src="img/5.png" width="100%">
+        </a></div>
+        </div>
+        <div class = "image_three animated-image">
+            <a href="index5.html">
+                <img src="img/6.png" width="100%">
+        </a></div>
+        <div class = "image_three animated-image">
+            <a href="index6.html">
+                <img src="img/7.png" width="100%">
+        </a></div>
+
+    </div>
+</section>
+
+<section id="price">
+    <h2>[ПРАЙС]</h2>
+    <div class="price-list">
+        <div class=" price-item">
+            <img class = 'type_two animated-image' src="img/20.png" alt="20">
+            <div class="first text-box"> 
+            <span span style="color: #676767;font-size: 4vh; font-weight: bold;margin-bottom: 7vh; text-align: left;">КОНЦЕПТ-АРТ</span>
+            <span style="text-align: right;"><span style="color: #676767; font-size: 2vh;">от</span> 3,000₽</span>
+            </div>
+        </div>
+        <div class="price-item">
+            <div class="second text-box"> 
+            <span span style="color: #676767;font-size: 4vh; font-weight: bold;margin-bottom: 7vh; text-align: left;">3D-СКУЛЬПТ</span>
+            <span style="text-align: right;"><span style="color: #676767; font-size: 2vh;text-align: right;">от</span> 3,000₽</span>
+            </div>
+            <img class = 'type_one animated-image' src="img/21.png" alt="21">
+        </div>
+        <div class="price-item">
+            <img class = 'type_two animated-image'src="img/22.png" alt="22">
+            <div class="first text-box"> 
+            <span span style="color: #676767;font-size: 4vh; font-weight: bold; margin-bottom: 7vh; text-align: left;">АРТ</span>
+            <span style="text-align: right;"><span style="color: #676767; font-size: 2vh;text-align: right;">от</span> 1,500₽</span>
+        </div>
+        </div>
+        <div class="price-item">
+            <div class="second text-box"> 
+            <span span style="color: #676767;font-size: 4vh; font-weight: bold;margin-bottom: 7vh; text-align: left;">ПЛАКАТЫ</span>
+            <span style="text-align: right;"><span style="color: #676767; font-size: 2vh;text-align: right;">от</span> 1,500₽</span>
+        </div>
+            <img class = 'type_one animated-image' src="img/23.png" alt="23">
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2>[КОНТАКТЫ]</h2>
+    <p class="q1">ЧТОБЫ СВЯЗАТЬСЯ</p>
+    <p class="q2">СО <span style="color: #FF1493;font-style: italic;">МНОЙ </span> —</p>
+    <p class="q3">ALLA20022808<br>@GMAIL.COM</p>
+</section>
+
+<div class = 'footer'>
+<a href="https://www.artstation.com/weesado"><img src="img/artstation.png"></a>
+<div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</div>
+<a href="https://www.behance.net/weesado"><img src="img/behance.png"></a>
+</div>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.animated-image');
+
+    function checkVisibility() {
+        images.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+            if (isVisible) {
+                img.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+});
+</script>
+
+</body>
+</html>
